@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <title>点赞</title>
+    </head>
+    <body>
+      <a href="/like">点赞</a>
+      <table border="1">
+        <tr>
+          <td>ID</td>
+          <td>节日名称</td>
+          <td>点赞数</td>
+          <td>操作</td>
+        </tr>
+        {% for f in data %}
+        <tr>
+          <td>{{ f.id }}</td>
+          <td>{{ f.name }}</td>
+          <td>{{ f.num }}</td>
+          <td><a href="/dz?id={{ f.id }}">点赞</a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </body>
+</html>
